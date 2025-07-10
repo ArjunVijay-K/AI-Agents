@@ -1,0 +1,24 @@
+fastapi>=0.100.0,<0.111.0
+uvicorn[standard]>=0.23.0,<0.28.0
+python-multipart>=0.0.6,<0.0.10 # For file uploads
+pydantic>=1.10.0,<3.0.0
+
+# Langchain and Llama related (examples, choose specific ones as needed)
+langchain>=0.1.0,<0.2.0
+# llama-cpp-python>=0.2.0,<0.3.0 # For GGUF models locally
+# sentence-transformers>=2.2.0,<3.0.0 # For embeddings
+# faiss-cpu # For FAISS vector store (CPU version)
+unstructured[docx,pdf]>=0.12.0,<0.13.0 # For document loading (general, including docx and pdf support)
+# pypdf # Usually pulled in by unstructured[pdf] or langchain, but can be explicit
+# python-docx # Usually pulled in by unstructured[docx]
+
+# For Llama.cpp, you might need to install it with specific flags
+# depending on your hardware (e.g., for Metal on Mac):
+# CMAKE_ARGS="-DLLAMA_METAL=on" pip install llama-cpp-python
+
+# Other useful libraries for document processing:
+# beautifulsoup4 # For HTML parsing (if job descriptions are HTML)
+# tiktoken # For token counting with OpenAI models/text splitters
+
+# Note: Pinning versions is good practice for reproducibility.
+# The versions above are examples and might need adjustment.
